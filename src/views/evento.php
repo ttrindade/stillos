@@ -1,85 +1,55 @@
-<!DOCTYPE html>
+<!--Tabela de Eventos-->
 
 <html>
     <head>
-        <title>Cadastro de Evento</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Stillos - Projeto Prático</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     </head>
     <body>
 
-        <!-- Navbar -->
-        <nav class="navbar navbar-default">
-            <div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
-                    </button>
-                    <a class="navbar-brand" href="../index.html">Stillos - Teste Prático</a>
+                    <a class="navbar-brand" href="painel.php">Stillos</a>
                 </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="cliente.html">Cliente</a></li>
-                        <li><a href="#">Evento</a></li>
-                        <li><a href="mesas.html">Mesas</a></li>
-                    </ul>
-                </div>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Clientes
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cliente.php">Listar</a></li>
+                            <li><a href="requests/cliente.php">Cadastrar</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Eventos
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="evento.php">Listar</a></li>
+                            <li><a href="requests/evento.php">Cadastrar</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mesas
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Relatório</a></li>
+                            <li><a href="#">Lançamento</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </nav>
 
 
-        <div class="container">
-            <h1>Cadastro de Evento</h1>
-            <form action="cadastro-evento">
+        <!-- Footer -->
+        <footer>
+            <p>Development by <a href="https://github.com/ttrindade">Thauan Trindade</a></p> 
+        </footer>
+    </body>       
 
-                <div>
-                    <label for="nome-evento">Nome</label>
-                    <input type="text" class="form-control" id="nome-evento" name="nome-evento">
-                </div>
-                <div>
-                    <label for="local-evento">Local</label>
-                    <input type="text" class="form-control" id="local-evento" name="local-evento">
-                </div>
-                <div>
-                    <label for="data">Data</label>
-                    <input type="text" class="form-control" id="data" name="data" placeholder="dd/mm/aaaa">
-                </div>
-                <div>
-                    <label for="inlineFormCustomSelect">Quantidade de Mesas</label>
-                    <select class="form-control" id="inlineFormCustomSelect">
-                        <option selected>0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="15">16</option>
-                        <option value="15">17</option>
-                        <option value="15">18</option>
-                        <option value="15">19</option>
-                        <option value="15">20</option>
-                        <option value="15">21</option>
-                        <option value="15">22</option>
-                    </select>
-                </div>
-                <br/>
-                <button type="submit" class="btn btn-default">Cadastrar</button>
-            </form>
-        </div>
-
-
-    </body>
 </html>

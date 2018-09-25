@@ -1,57 +1,55 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>Stillos - Teste Prático</title>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="stylesheet" href="css/style.css">
+        <meta charset="utf-8">
+        <title>Stillos - Projeto Prático</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    </head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    </head>
     <body>
-        <!-- Navbar -->
-        <nav class="navbar navbar-default">
-            <div class="container">
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
-                    </button>
-                    <a class="navbar-brand" href="#">Stillos - Teste Prático</a>
+                    <a class="navbar-brand" href="painel.php">Stillos</a>
                 </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="cliente.php">Cliente</a></li>
-                        <li><a href="evento.php">Evento</a></li>
-                        <li><a href="mesas.php">Mesas</a></li>
-                    </ul>
-                </div>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Clientes
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cliente.php">Listar</a></li>
+                            <li><a href="requests/cliente.php">Cadastrar</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Eventos
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="evento.php">Listar</a></li>
+                            <li><a href="requests/evento.php">Cadastrar</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mesas
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Relatório</a></li>
+                            <li><a href="#">Lançamento</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </nav>
 
-        <!-- First Container -->
-        <div class="container-fluid bg-1 text-center">
-            <h3 class="margin">Bem vindo ao meu Projeto Prático</h3>
-            <img src="img/graduate-cap-2.png" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
 
-        </div>
-
-        <!-- Second Container -->
-        <div class="container-fluid bg-2 text-center">
-
-            <h2>Recado:</h2>
-            <h3>Faça uma ótima avaliação! XD</h3>
-            <img src="img/plana-fita.png" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-
-        </div>
+        <h2>Bem vindo ao meu Projeto Prático</h2>
 
         <!-- Footer -->
-        <footer class="container-fluid bg-4 text-center">
-            <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
+        <footer>
+            <p>Development by <a href="https://github.com/ttrindade">Thauan Trindade</a></p> 
         </footer>
+    </body>       
 
-    </body>
 </html>
