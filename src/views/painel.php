@@ -24,9 +24,9 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="cadastro/cliente.html">Cliente</a></li>
-                        <li><a href="cadastro/evento.html">Evento</a></li>
-                        <li><a href="cadastro/mesas.html">Mesas</a></li>
+                        <li><a href="cliente.php">Cliente</a></li>
+                        <li><a href="evento.php">Evento</a></li>
+                        <li><a href="mesas.php">Mesas</a></li>
                     </ul>
                 </div>
             </div>
