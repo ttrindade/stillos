@@ -38,8 +38,8 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mesas
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Relatório</a></li>
-                            <li><a href="#">Lançamento</a></li>
+                            <li><a href="../mesas.php">Relatório</a></li>
+                            <li><a href="mesa.php">Lançamento</a></li>
                         </ul>
                     </li>
                 </ul>

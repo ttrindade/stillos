@@ -35,47 +35,49 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mesas
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Relatório</a></li>
-                            <li><a href="#">Lançamento</a></li>
+                            <li><a href="mesas.php">Relatório</a></li>
+                            <li><a href="requests/mesa.php">Lançamento</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </nav>
 
-        <?php
-        $host = "localhost";
-        $db = "stillos";
-        $user = "root";
-        $pass = "";
-        $con = mysqli_connect($host, $user, $pass, $db);
-        $query = sprintf("SELECT id, Nome, CPF, Endereco, CEP FROM Clientes");
-        $dados = mysqli_query($con, $query);
+        <table style="width:100%">
+            <tr>
+                <th>ID</th>
+                <th>NOME</th> 
+                <th>CPF</th>
+                <th>ENDEREÇO</th>
+                <th>CPF</th>
+            </tr>
 
-        $linha = mysqli_fetch_assoc($dados);
-        $total = mysqli_num_rows($dados);
+            <?php
+            $host = "localhost";
+            $db = "stillos";
+            $user = "root";
+            $pass = "";
+            $con = mysqli_connect($host, $user, $pass, $db);
+            $query = sprintf("SELECT id, Nome, CPF, Endereco, CEP FROM Clientes");
+            $dados = mysqli_query($con, $query);
 
-        if ($total > 0) {
-            do {
-                ?>
-                <table style="width:100%">
-                    <tr>
-                        <th>ID</th>
-                        <th>NOME</th> 
-                        <th>CPF</th>
-                        <th>ENDEREÇO</th>
-                        <th>CPF</th>
-                    </tr>
-                    <tr>
-                        <td><?= $linha['id'] ?> </td>
-                        <td><?= $linha['Nome'] ?></td>
-                        <td><?= $linha['CPF'] ?></td>
-                        <td><?= $linha['Endereco'] ?></td>
-                        <td> <?= $linha['CEP'] ?></td>
-                    </tr>
-                </table>   
-                <?php
-            } while ($linha = mysqli_fetch_assoc($dados));
-        }
-        mysqli_free_result($dados);
-        ?>
+            $linha = mysqli_fetch_assoc($dados);
+            $total = mysqli_num_rows($dados);
+
+            if ($total > 0) {
+                do {
+                    ?>
+                    <table style="width:100%">
+                        <tr>
+                            <td><?= $linha['id'] ?> </td>
+                            <td><?= $linha['Nome'] ?></td>
+                            <td><?= $linha['CPF'] ?></td>
+                            <td><?= $linha['Endereco'] ?></td>
+                            <td> <?= $linha['CEP'] ?></td>
+                        </tr>
+                    </table>   
+                    <?php
+                } while ($linha = mysqli_fetch_assoc($dados));
+            }
+            mysqli_free_result($dados);
+            ?>

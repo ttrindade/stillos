@@ -9,7 +9,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <script type="text/javascript">
+      <!--  <script type="text/javascript">
             function fMasc(objeto, mascara) {
                 obj = objeto
                 masc = mascara
@@ -60,7 +60,7 @@
                 num = num.replace(/\D/g, "")
                 return num
             }
-        </script>
+        </script>-->
     </head>
     <body>
 
@@ -90,8 +90,8 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mesas
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Relatório</a></li>
-                            <li><a href="#">Lançamento</a></li>
+                            <li><a href="../mesas.php">Relatório</a></li>
+                            <li><a href="mesa.php">Lançamento</a></li>
                         </ul>
                     </li>
                 </ul>
