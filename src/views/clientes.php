@@ -1,5 +1,3 @@
-<!--Tabela de Eventos-->
-
 <html>
     <head>
         <meta charset="utf-8">
@@ -21,7 +19,7 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Clientes
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="cliente.php">Listar</a></li>
+                            <li><a href="clientes.php">Listar</a></li>
                             <li><a href="requests/cliente.php">Cadastrar</a></li>
                         </ul>
                     </li>
@@ -29,7 +27,7 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Eventos
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="evento.php">Listar</a></li>
+                            <li><a href="eventos.php">Listar</a></li>
                             <li><a href="requests/evento.php">Cadastrar</a></li>
                         </ul>
                     </li>
@@ -45,11 +43,39 @@
             </div>
         </nav>
 
+        <?php
+        $host = "localhost";
+        $db = "stillos";
+        $user = "root";
+        $pass = "";
+        $con = mysqli_connect($host, $user, $pass, $db);
+        $query = sprintf("SELECT id, Nome, CPF, Endereco, CEP FROM Clientes");
+        $dados = mysqli_query($con, $query);
 
-        <!-- Footer -->
-        <footer>
-            <p>Development by <a href="https://github.com/ttrindade">Thauan Trindade</a></p> 
-        </footer>
-    </body>       
+        $linha = mysqli_fetch_assoc($dados);
+        $total = mysqli_num_rows($dados);
 
-</html>
+        if ($total > 0) {
+            do {
+                ?>
+                <table style="width:100%">
+                    <tr>
+                        <th>ID</th>
+                        <th>NOME</th> 
+                        <th>CPF</th>
+                        <th>ENDEREÇO</th>
+                        <th>CPF</th>
+                    </tr>
+                    <tr>
+                        <td><?= $linha['id'] ?> </td>
+                        <td><?= $linha['Nome'] ?></td>
+                        <td><?= $linha['CPF'] ?></td>
+                        <td><?= $linha['Endereco'] ?></td>
+                        <td> <?= $linha['CEP'] ?></td>
+                    </tr>
+                </table>   
+                <?php
+            } while ($linha = mysqli_fetch_assoc($dados));
+        }
+        mysqli_free_result($dados);
+        ?>

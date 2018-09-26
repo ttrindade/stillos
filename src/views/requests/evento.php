@@ -22,7 +22,7 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Clientes
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="../cliente.php">Listar</a></li>
+                            <li><a href="../clientes.php">Listar</a></li>
                             <li><a href="cliente.php">Cadastrar</a></li>
                         </ul>
                     </li>
@@ -30,7 +30,7 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Eventos
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="../evento.php">Listar</a></li>
+                            <li><a href="../eventos.php">Listar</a></li>
                             <li><a href="evento.php">Cadastrar</a></li>
                         </ul>
                     </li>
