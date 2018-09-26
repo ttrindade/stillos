@@ -102,7 +102,7 @@
 
         <div class="container">
             <h1>Cadastro de Cliente</h1>
-            <form  method="POST" action="from/cadastro-cliente.php">
+            <form  method="POST" action="cadastro-cliente.php">
 
                 <div>
                     <label for="nome">Nome</label>
@@ -124,25 +124,5 @@
                 <button type="submit" class="btn btn-default">Cadastrar</button>
             </form>
         </div>
-
-
     </body>       
-
 </html>
-
-
-<?php
-$connect = mysqli_connect('localhost', 'root', '', 'stillos');
-$sql = "INSERT INTO 'Clientes'(Nome, CPF, Endereco, CEP) VALUES('$_POST[nome]','$_POST[cpf]','$_POST[endereco]','$_POST[cep]')";
-
-$result = mysqli_query($sql);
-
-if ($result) {
-
-    echo("<br>Input data is succeed");
-} else {
-
-    echo("<br>Input data is fail");
-}
-mysqli_close($connect);
-?>

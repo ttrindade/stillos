@@ -49,7 +49,7 @@
 
         <div class="container">
             <h1>Cadastro de Evento</h1>
-            <form action="cadastro-evento">
+            <form  method="POST" action="cadastro-evento.php">
 
                 <div>
                     <label for="nome">Nome</label>
