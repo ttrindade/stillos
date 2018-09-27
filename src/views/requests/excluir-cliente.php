@@ -15,7 +15,7 @@ if (!$conn) {
 }
 
 // sql to delete a record
-$sql = "DELETE FROM Clientes WHERE id=5";
+$sql = "DELETE FROM Clientes WHERE id=1";
 
 if (mysqli_query($conn, $sql)) {
     echo "<h2>Cliente deletado com sucesso.</h2>";
