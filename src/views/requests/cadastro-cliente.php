@@ -18,7 +18,10 @@ $con = mysqli_connect('localhost', 'root', '', 'stillos');
 
         $result = mysqli_query($con, $sql);
 
-        echo "<h2>Cadastro realizado com sucesso!</h2>";
+        if (!$result == FALSE) {
+
+            echo "<h2>Cadastro realizado com sucesso!</h2>";
+        }
         ?>
 
         Retornar a página de cadastro. <a href="cliente.php">Clique aqui</a>

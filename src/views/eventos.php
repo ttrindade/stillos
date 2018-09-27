@@ -50,34 +50,40 @@
                 <th>LOCAL</th>
                 <th>DATA</th>
                 <th>QUANT. MESAS</th>
+                <th>OPÇÃO</th>
             </tr>
+        </table>
 
-            <?php
-            $host = "localhost";
-            $db = "stillos";
-            $user = "root";
-            $pass = "";
-            $con = mysqli_connect($host, $user, $pass, $db);
-            $query = sprintf("SELECT id, Descricao, Local, Data, Qtd_Mesas FROM Eventos");
-            $dados = mysqli_query($con, $query);
+        <?php
+        $host = "localhost";
+        $db = "stillos";
+        $user = "root";
+        $pass = "";
+        $con = mysqli_connect($host, $user, $pass, $db);
+        $query = sprintf("SELECT id, Descricao, Local, Data, Qtd_Mesas FROM Eventos");
+        $dados = mysqli_query($con, $query);
 
-            $linha = mysqli_fetch_assoc($dados);
-            $total = mysqli_num_rows($dados);
+        $linha = mysqli_fetch_assoc($dados);
+        $total = mysqli_num_rows($dados);
 
-            if ($total > 0) {
-                do {
-                    ?>
-                    <table style="width:100%">
-                        <tr>
-                            <td><?= $linha['id'] ?> </td>
-                            <td><?= $linha['Descricao'] ?></td>
-                            <td><?= $linha['Local'] ?></td>
-                            <td><?= $linha['Data'] ?></td>
-                            <td> <?= $linha['Qtd_Mesas'] ?></td>
-                        </tr>
-                    </table>   
-                    <?php
-                } while ($linha = mysqli_fetch_assoc($dados));
-            }
-            mysqli_free_result($dados);
-            ?>
+        if ($total > 0) {
+            do {
+                ?>
+                <table style="width:100%">
+                    <tr>
+                        <td><?= $linha['id'] ?> </td>
+                        <td><?= $linha['Descricao'] ?></td>
+                        <td><?= $linha['Local'] ?></td>
+                        <td><?= $linha['Data'] ?></td>
+                        <td> <?= $linha['Qtd_Mesas'] ?></td>
+                        <td><a href="requests/excluir-evento.php"><button>Excluir</button></a> <a href="requests/editar-evento.php"><button>Editar</button></a></td>  
+                    </tr>
+                </table>   
+                <?php
+            } while ($linha = mysqli_fetch_assoc($dados));
+        }
+        mysqli_free_result($dados);
+        ?>
+
+    </body>
+</html>

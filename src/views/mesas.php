@@ -56,5 +56,36 @@
             </form>
         </div>
 
+        <?php
+        $host = "localhost";
+        $db = "stillos";
+        $user = "root";
+        $pass = "";
+        $con = mysqli_connect($host, $user, $pass, $db);
+        $query = sprintf("SELECT id, Nome, CPF, Endereco, CEP FROM Eventos");
+        $dados = mysqli_query($con, $query);
+
+        $linha = mysqli_fetch_assoc($dados);
+        $total = mysqli_num_rows($dados);
+
+        if ($total > 0) {
+            do {
+                ?>
+                <table style="width:100%">
+                    <tr>
+                        <td><?= $linha['id'] ?> </td>
+                        <td><?= $linha['Nome'] ?></td>
+                        <td><?= $linha['CPF'] ?></td>
+                        <td><?= $linha['Endereco'] ?></td>
+                        <td> <?= $linha['CEP'] ?></td>
+                    </tr>
+                </table>   
+                <?php
+            } while ($linha = mysqli_fetch_assoc($dados));
+        }
+        mysqli_free_result($dados);
+        ?>
+
+
     </body>       
 </html>
